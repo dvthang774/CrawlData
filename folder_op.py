@@ -1,7 +1,7 @@
 # các hàm cần thiết
 import os
 
-a = os.chdir("C:\\Users\\Admin\\crawlweb\\")
+a = os.chdir("D:\\crawl")
 n = len(os.listdir(a))
 #các hàm
 
