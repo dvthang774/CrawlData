@@ -1,7 +1,7 @@
 # các hàm cần thiết
 import os
 
-a = os.chdir('E:\\crawl')
+a = os.chdir('./crawl')
 n = len(os.listdir(a))
 #các hàm
 
@@ -12,7 +12,8 @@ def tao_ten_file_tu_dong(name):
     return k
 
 #hàm lưu nội dung vào file ở  thư mục chỉ định
-def luu_noi_dung(content, folder):
-    f = open("Crawl"+ str(n+1) + ".txt", 'w+', encoding='utf-8')
+def luu_noi_dung(content, folder, urlIndex):
+    print("Saving data to file", "Crawl"+ str(urlIndex) + ".txt")
+    f = open(folder+"/Crawl"+ str(urlIndex) + ".txt", 'w+', encoding='utf-8')
     f.write(str(content))
     f.close()
