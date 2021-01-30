@@ -1,7 +1,11 @@
 # các hàm cần thiết
 import os
+import constant
 
-a = os.chdir('./crawl')
+if not os.path.exists(constant.EXPORT_ROOT_FOLDER):
+    os.makedirs(constant.EXPORT_ROOT_FOLDER)
+
+a = os.chdir(constant.EXPORT_ROOT_FOLDER)
 n = len(os.listdir(a))
 #các hàm
 
@@ -17,3 +21,11 @@ def luu_noi_dung(content, folder, urlIndex):
     f = open(folder+"/Crawl"+ str(urlIndex) + ".txt", 'w+', encoding='utf-8')
     f.write(str(content))
     f.close()
+
+def create_directory(path) :
+    try:
+        os.mkdir(path)
+    except OSError:
+        print ("Creation of the directory %s failed" % path)
+    else:
+        print ("Successfully created the directory %s " % path)
