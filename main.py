@@ -3,9 +3,9 @@ import folder_op,web_op
 def start():
     url_list = ['https://vietnamnet.vn/']
     history = []  # chứa các đường link đã được duyệt
-    max_page = 1000  # quy định số lượng trang web được tải về
+    max_page = 10  # quy định số lượng trang web được tải về
     count = 0  # đếm số lượng trang web đã tải về
-    data_folder = "D:\\crawl"
+    data_folder = "E:\\crawl"
 
     # kịch bản tải các trang web
 

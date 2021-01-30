@@ -1,7 +1,7 @@
 #các thư viện cần thiết
 import requests
 from bs4 import BeautifulSoup
-import regex as re
+import re
 
 
 #các hàm cần thiết
